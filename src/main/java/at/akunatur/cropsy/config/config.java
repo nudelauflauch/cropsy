@@ -11,6 +11,8 @@ public class config {
 	public static final ForgeConfigSpec config;
 
 	static {
+		RandomPlacer.init(server builder, client builder);
+		
 		config = builder.build();
 	}
 
