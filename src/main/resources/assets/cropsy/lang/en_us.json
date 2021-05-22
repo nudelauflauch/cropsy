@@ -1,0 +1,10 @@
+{
+	//blocks
+	"block.cropsy.wheat_poppy":"Wheat Poppy",
+	
+	//item
+	"item.cropsy.weet":"test item",
+	
+	//vanilla Items
+	"block.minecraft.wheat": "Wheat Seeds"
+}
