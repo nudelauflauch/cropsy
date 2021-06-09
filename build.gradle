@@ -12,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '0.1'
+version = '0.2'
 group = 'at.akunatur.cropsy'
 archivesBaseName = 'cropsy'
 
@@ -20,7 +20,7 @@ sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = co
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-    mappings channel: 'snapshot', version: '20201028-1.16.3'
+    mappings channel: 'official', version: '1.16.5'
     runs {
         client {
             workingDirectory project.file('run')
@@ -74,14 +74,14 @@ repositories {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.5-36.1.23'
-    
+
     // JEI Dependencies
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
-    
+
     runtimeOnly fg.deobf("curse.maven:mousetweaks-60089:3202662")
-    runtimeOnly fg.deobf("curse.maven:curdforge-478703:3304481") 
-    runtimeOnly fg.deobf("curse.maven:reap-mod-244256:3169773") 
+    runtimeOnly fg.deobf("curse.maven:curdforge-478703:3304481")
+    runtimeOnly fg.deobf("curse.maven:reap-mod-244256:3169773")
 }
 
 jar {
@@ -98,7 +98,7 @@ jar {
     }
 }
 
-jar.finalizedBy('reobfJar') 
+jar.finalizedBy('reobfJar')
 
 publishing {
     publications {

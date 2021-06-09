@@ -2,6 +2,7 @@ package at.akunatur.cropsy.core.util;
 
 import java.util.Random;
 
+import at.akunatur.cropsy.config.RandomPlacer;
 import at.akunatur.cropsy.core.init.BlockInit;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -20,7 +21,7 @@ public class Cropfunktion {
 
 	public static Block random(int ch1, int ch2, int ch3, Block bl1, Block bl2, Block bl3, boolean vegetables) {
 		Random rand = new Random();
-		int zahl = rand.nextInt(102);
+		int zahl = rand.nextInt(100+RandomPlacer.random_picker.get());
 
 		if (zahl > 0 && zahl < (0 + ch1)) {
 			return bl1;
